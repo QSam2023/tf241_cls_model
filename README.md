@@ -38,6 +38,9 @@ python setup.py
 ```bash
 # 安装所需依赖包
 pip install -r requirements.txt
+
+# 配置环境
+export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH
 ```
 
 ### 3. 数据准备
