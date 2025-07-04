@@ -1,6 +1,5 @@
-# TensorFlow 核心框架
+# TensorFlow 核心框架（包含GPU支持）
 tensorflow==2.4.1
-tensorflow-gpu==2.4.1
 
 # 数据处理
 numpy==1.19.5
@@ -10,13 +9,13 @@ scikit-learn==0.24.2
 # 文本处理
 nltk==3.6.7
 jieba==0.42.1
-gensim==4.1.2
-transformers==4.5.1
+gensim==3.8.3
+transformers==4.2.2
 
 # 可视化
 matplotlib==3.3.4
 seaborn==0.11.2
-plotly==5.3.1
+plotly==4.14.3
 
 # 进度条和日志
 tqdm==4.62.3
@@ -62,7 +61,7 @@ pytest==6.2.5
 pytest-cov==3.0.0
 
 # 代码格式化
-black==21.12b0
+black==20.8b1
 flake8==4.0.1
 
 # 文件操作

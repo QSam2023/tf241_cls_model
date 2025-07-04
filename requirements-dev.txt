@@ -46,5 +46,5 @@ mlflow==1.22.0
 wandb==0.12.7
 
 # 代码格式化增强
-isort==5.10.1
+isort==5.9.3
 autopep8==1.6.0

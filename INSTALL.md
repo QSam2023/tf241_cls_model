@@ -47,6 +47,12 @@ python setup.py
 pip install -r requirements.txt
 ```
 
+#### 最小化安装（避免依赖冲突）
+```bash
+# 如果遇到依赖冲突，使用最小化依赖
+pip install -r requirements-minimal.txt
+```
+
 #### 开发环境安装
 ```bash
 # 安装开发依赖（包含所有基础依赖）
@@ -86,7 +92,24 @@ python -c "import numpy, pandas, sklearn, nltk, jieba; print('所有包安装成
 
 ## 常见问题解决
 
-### 1. TensorFlow 安装失败
+### 1. 依赖冲突问题
+如果遇到类似 `typing-extensions` 版本冲突的错误：
+
+```bash
+# 方案1：使用最小化依赖
+pip install -r requirements-minimal.txt
+
+# 方案2：逐步安装
+pip install tensorflow==2.4.1
+pip install numpy==1.19.5 pandas==1.3.5
+pip install nltk==3.6.7 jieba==0.42.1
+pip install matplotlib==3.3.4 tqdm==4.62.3
+
+# 方案3：忽略依赖冲突（不推荐）
+pip install -r requirements.txt --force-reinstall --no-deps
+```
+
+### 2. TensorFlow 安装失败
 ```bash
 # 清除缓存重新安装
 pip cache purge
@@ -94,14 +117,20 @@ pip install --upgrade pip
 pip install tensorflow==2.4.1
 ```
 
-### 2. 中文包安装问题
+### 3. 中文包安装问题
 ```bash
 # 使用国内镜像
 pip install -i https://pypi.tuna.tsinghua.edu.cn/simple jieba
 ```
 
-### 3. 内存不足
+### 4. 内存不足
 ```bash
 # 减少并行进程数
 pip install --no-cache-dir -r requirements.txt
 ```
+
+### 5. 版本兼容性说明
+- **TensorFlow 2.4.1** 已包含 GPU 支持，无需单独安装 tensorflow-gpu
+- **black** 版本已降低到 20.8b1 以避免 typing-extensions 冲突
+- **transformers** 版本已降低到 4.2.2 以确保与 TensorFlow 2.4.1 兼容
+- **gensim** 版本已降低到 3.8.3 以避免依赖冲突
