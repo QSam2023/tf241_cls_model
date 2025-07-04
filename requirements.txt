@@ -66,3 +66,10 @@ flake8==4.0.1
 
 # 文件操作
 openpyxl==3.0.9
+
+# TensorFlow 2.4.1 兼容性依赖包 - 解决版本冲突
+absl-py==0.10.0
+six==1.15.0
+termcolor==1.1.0
+typing-extensions==3.7.4
+wrapt==1.12.1
