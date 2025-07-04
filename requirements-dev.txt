@@ -1,0 +1,50 @@
+# 包含所有基础依赖
+-r requirements.txt
+
+# 开发和调试工具
+ipython==7.29.0
+ipdb==0.13.9
+pdb++==0.10.3
+
+# 代码质量检查
+pylint==2.11.1
+mypy==0.910
+bandit==1.7.4
+pre-commit==2.15.0
+
+# 文档生成
+sphinx==4.3.2
+sphinx-rtd-theme==1.0.0
+
+# 性能分析
+line_profiler==3.3.1
+py-spy==0.3.10
+
+# 自动化测试
+pytest-mock==3.6.1
+pytest-xdist==2.4.0
+pytest-benchmark==3.4.1
+coverage==6.2
+
+# 依赖管理
+pip-tools==6.4.0
+pipdeptree==2.2.1
+
+# 环境管理
+python-dotenv==0.19.2
+
+# 数据可视化增强
+plotly-dash==2.0.0
+streamlit==1.2.0
+
+# 模型解释性
+shap==0.40.0
+lime==0.2.0.1
+
+# 实验跟踪
+mlflow==1.22.0
+wandb==0.12.7
+
+# 代码格式化增强
+isort==5.10.1
+autopep8==1.6.0
